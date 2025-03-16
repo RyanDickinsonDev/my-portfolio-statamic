@@ -1,0 +1,51 @@
+title: Pages
+sections:
+  main:
+    display: Main
+    fields:
+      - handle: page_title
+        field:
+          type: text
+          display: 'Page Title'
+
+      - handle: about_me
+        field:
+          type: textarea
+          display: 'About Me (First Paragraph)'
+
+      - handle: about_goal
+        field:
+          type: textarea
+          display: 'About Goal (Second Paragraph)'
+
+      - handle: education_heading
+        field:
+          type: text
+          display: 'Education Heading'
+          instructions: "e.g. 'Background and Education'"
+
+      - handle: education_paragraph
+        field:
+          type: textarea
+        display: 'Education Paragraph'
+        instructions: 'A short paragraph on your background.'
+
+      - handle: education_image
+        field:
+          type: assets
+          display: 'Education Image'
+          max_files: 1
+          instructions: 'Upload the image (e.g. marquette.webp).'
+
+      - handle: education_followup
+        field:
+          type: textarea
+        display: 'Education Followup Paragraph'
+        instructions: 'Another paragraph about your university/skills.'
+
+      - handle: resume_file
+        field:
+          type: assets
+          display: 'Resume PDF'
+          max_files: 1
+          instructions: 'Upload your resume PDF.'

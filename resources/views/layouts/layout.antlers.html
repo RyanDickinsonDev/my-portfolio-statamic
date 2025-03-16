@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title ?? 'My Portfolio' }}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>{{ site_name ?? 'Ryan Dickinson' }}</h1>
+        <nav>
+            <ul class="nav">
+                <li class="nav-item"><a href="#about">About</a></li>
+                <li class="nav-item"><a href="#education">Education</a></li>
+                <li class="nav-item"><a href="/projects">Projects</a></li>
+                <li class="nav-item"><a href="/contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {{ template_content }} <!-- This correctly loads content from templates -->
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ryan Dickinson's Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
