@@ -8,12 +8,12 @@
     <div class="background">
         <h3 id="education">{{ education_heading }}</h3>
         <p>{{ education_paragraph }}</p>
-        <img src="{{ education_image | url }}" alt="A view of Marquette">
+        <img src="{{ education_image }}" alt="A view of Marquette">
         <p>{{ education_followup }}</p>
     </div>
 
     <div class="resume-download">
-        <a href="{{ resume_file | url }}" class="btn btn-primary" download="{{ resume_file:filename }}">
+        <a href="{{ resume_file }}" class="btn btn-primary" download>
             Download My Resume
         </a>
     </div>
