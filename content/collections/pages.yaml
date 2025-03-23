@@ -1,4 +1,13 @@
 title: Pages
-route: '/{slug}'
-template: home # Default template for all pages in this collection
+template: page
 layout: layout
+revisions: true
+route: '{parent_uri}/{slug}'
+sort_dir: asc
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: false
+structure:
+  root: true

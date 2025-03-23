@@ -1,0 +1,51 @@
+<section id="contact-form">
+    <h2>Contact me today!</h2>
+
+    <form action="/contact" method="POST">
+        {{ csrf_field }}
+        <div class="form-group">
+            <label>Name:</label>
+            <input type="text" name="name" required>
+        </div>
+        <div class="form-group">
+            <label>Email:</label>
+            <input type="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label>Message:</label>
+            <textarea name="message" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+{{ if success != "" }}
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toast = document.createElement('div');
+        toast.innerHTML = " {{ success }}";
+        toast.style.position = 'fixed';
+        toast.style.bottom = '20px';
+        toast.style.right = '20px';
+        toast.style.backgroundColor = '#4CAF50';
+        toast.style.color = '#fff';
+        toast.style.padding = '12px 20px';
+        toast.style.borderRadius = '5px';
+        toast.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+        toast.style.zIndex = '9999';
+        toast.style.opacity = '0';
+        toast.style.transition = 'opacity 0.3s ease';
+
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+            toast.style.opacity = '1';
+        }, 100);
+
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            setTimeout(() => toast.remove(), 300);
+        }, 4000);
+    });
+</script>
+{{ /if }}

@@ -2,6 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-// Route::statamic('example', 'example-view', [
-//    'title' => 'Example'
-// ]);
+use App\Http\Controllers\ContactController;
+
+Route::post('/contact', [ContactController::class, 'send']);
