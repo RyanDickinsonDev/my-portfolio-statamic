@@ -3,6 +3,12 @@
 
     <form action="/contact" method="POST">
         {{ csrf_field }}
+
+
+        <input type="text" name="botCheck" style="display:none;" autocomplete="off">
+
+        <input type="hidden" name="captchaId">
+        <input type="hidden" name="validatedCaptcha">
         <div class="form-group">
             <label>Name:</label>
             <input type="text" name="name" required>
@@ -11,13 +17,16 @@
             <label>Email:</label>
             <input type="email" name="email" required>
         </div>
-        <div class="form-group">
+        <div class="form-group" style="margin-bottom: 20px;">
             <label>Message:</label>
-            <textarea name="message" required></textarea>
+            <textarea name="message" style="width: 100%;" required></textarea>
         </div>
-        <button type="submit">Send Message</button>
+        <div data-captcha style="margin: 20px 0;"></div>
+        <button type="submit" style="margin-top: 20px;">Send Message</button>
     </form>
 </section>
+
+<script src="https://captchatool.com/captcha-widget.min.js" defer></script>
 
 {{ if success != "" }}
 <script>
